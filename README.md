@@ -34,8 +34,9 @@ The automarked component must be submitted online by the due date shown in the l
 An autograder will then run your code through tests which will decide your score.
 
 The handmarked component is due up to three weeks from the week it was assigned.
-The handmarked component must be marked by me or our lab assistant in person.
+This must be marked by me or our lab assistant in person.
 We will usually ask you to explain your solution, followed by some short questions.
 
 For example, the week 1 lab is due Monday 12pm, week 2. The automarked component must be submitted by this time. The handmarked component can be marked up till Friday, week 3.
 
+You cannot get labs marked in HELP sessions.
