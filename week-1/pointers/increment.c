@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 void increment(int num);
-void incrementWithPointer(int *num);
+void incrementWithPointer(int *pNum);
 
 int main(void) {
 	int num = 5;
@@ -21,6 +21,6 @@ void increment(int num) {
 }
 
 /// Dereferences pnum then increments it.
-void incrementWithPointer(int *pnum) {
-	(*pnum)++;
+void incrementWithPointer(int *pNum) {
+	(*pNum)++;
 }
