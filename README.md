@@ -26,7 +26,7 @@ No.
 
 Yes.
 
-## I'm stuck, where can I get help?
+### I'm stuck, where can I get help?
 For starters, try searching your problem online. 90% of the time, someone on Reddit has already encountered this problem and you will find a solution. This is the #1 skill that you should develop as a developer / engineer!
 
 If you require specialised help, search the forum and make a post. Forum posts are regularly monitored.
