@@ -1,11 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Linked List
-struct node {
-	int value;
-	struct node *next;
-};
+#include "List.h"
 
 void printList(struct node *head);
 
