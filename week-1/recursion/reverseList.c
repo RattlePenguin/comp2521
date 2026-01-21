@@ -20,6 +20,7 @@ int main(void) {
 	head = reverseList(head);
 
 	// printList(head);
+	return 0;
 }
 
 /** Reverses a linked list recursively.
