@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
 
@@ -20,7 +21,19 @@ struct graph *GraphNew(int numNodes) {
 }
 
 /**
- * Inserts an edge of weight 1 into graph g, between nodes x and y.
+ * Frees the given graph and all its components.
+ */
+void GraphFree(struct graph *g) {
+	// Free edges
+	for (int i = 0; i < g->numNodes; ++i) {
+		free(g->edges[i]);
+	}
+	free(g->edges);
+	free(g);
+}
+
+/**
+ * Inserts an edge of weight 1 into graph g, between nodes x and y (bidirectional).
  */
 bool GraphEdgeInsert(struct graph *g, int x, int y) {
 	if (g->edges[x][y] != 0) {
@@ -29,5 +42,14 @@ bool GraphEdgeInsert(struct graph *g, int x, int y) {
 
 	g->edges[x][y] = 1;
 	g->edges[y][x] = 1;
+	g->numEdges++;
 	return true;
+}
+
+/**
+ * Prints the adjacency matrix in human-readable format.
+ * Breaks format past numNodes / edge weights in the double digits.
+ */
+void GraphPrint(struct graph *g) {
+	
 }
