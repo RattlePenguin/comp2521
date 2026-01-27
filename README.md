@@ -17,7 +17,7 @@ In previous terms, I would recap lecture content for the first half of the tutor
 
 # Prerequisites
 - Watch :eyes: or Star :star: this repository to get notified of changes.
-- Read the [FAQ](#1-faq)!
+- Read the FAQ!
 
 # FAQ
 ### Are there any group projects?
