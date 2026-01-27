@@ -27,9 +27,10 @@ No.
 Yes.
 
 ### I'm stuck, where can I get help?
-For starters, try searching your problem online. 90% of the time, someone on Reddit has already encountered this problem and you will find a solution. This is the #1 skill that you should develop as a developer / engineer!
 
-If you require specialised help, search the forum and make a post. Forum posts are regularly monitored.
+For starters, try searching your problem online. 90% of the time, someone on Reddit has already encountered this problem and you will find a solution. This could be the most important skill that you should develop as a developer / engineer!
+
+If you require specialised help, search the forum first then make a post.
 
 Finally, you can email me...
 
@@ -47,3 +48,7 @@ We will usually ask you to explain your solution, followed by some short questio
 For example, the week 1 lab is due Monday 12pm, week 2. The automarked component must be submitted by this time. The handmarked component can be marked up till Friday, week 3.
 
 You cannot get labs marked in HELP sessions.
+
+### What's your favourite colour!?
+
+Purple.
