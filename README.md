@@ -7,6 +7,18 @@ insert forum link
 # My Email
 b.setiawan@unsw.edu.au
 
+# Introduction
+Welcome to COMP2521, Data Structures and Algorithms (DSA)!
+DSA covers a large variety of techniques and knowledge required to store, manipulate and utilise data efficiently. For some of you, this may be the most important course in your career.
+
+This repository will contain most of what I teach in tutorials, with the exception of whiteboard drawings or external tools such as visualisers.
+
+In previous terms, I would recap lecture content for the first half of the tutorial. I am moving on from this style and will instead opt for more open-ended tutorials so that I can focus on problems that you all have more trouble with. As such, please watch the lectures before coming to class.
+
+# Prerequisites
+- Watch :eyes: or Star :star: this repository to get notified of changes.
+- Read the [FAQ](#1-faq)!
+
 # FAQ
 ### Are there any group projects?
 
