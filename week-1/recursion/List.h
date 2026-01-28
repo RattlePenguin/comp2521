@@ -7,4 +7,9 @@ struct node {
 	struct node *next;
 };
 
+// Linked List funny version
+struct list {
+	struct node *head;
+};
+
 #endif
