@@ -12,9 +12,9 @@ struct graph *GraphNew(int numNodes) {
 	g->numNodes = numNodes;
 	
 	// Empty graph
-	g->edges = calloc(numNodes, sizeof(int *));
+	g->edges = calloc((unsigned long) numNodes, sizeof(int *));
 	for (int i = 0; i < numNodes; ++i) {
-		g->edges[i] = calloc(numNodes, sizeof(int));
+		g->edges[i] = calloc((unsigned long) numNodes, sizeof(int));
 	}
 
 	return g;
@@ -48,8 +48,13 @@ bool GraphEdgeInsert(struct graph *g, int x, int y) {
 
 /**
  * Prints the adjacency matrix in human-readable format.
- * Breaks format past numNodes / edge weights in the double digits.
+ * Breaks format when numNodes / edge weights exceeds double digits.
  */
 void GraphPrint(struct graph *g) {
-	
+	printf("Adjacency Matrix:\n");
+
+	printf("   ");
+	for (int i = 0; i < g->numNodes; ++i) {
+		printf("%02d ", i);
+	}
 }

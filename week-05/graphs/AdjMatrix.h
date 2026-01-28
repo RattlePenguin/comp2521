@@ -12,4 +12,5 @@ struct graph {
 
 struct graph *GraphNew(int numNodes);
 bool GraphEdgeInsert(struct graph *g, int x, int y);
+void GraphPrint(struct graph *g);
 #endif
