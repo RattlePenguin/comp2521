@@ -1,11 +1,28 @@
 #include <stdio.h>
+#include <stdlib.h>
+
 #include "List.h"
+
+int listSize(struct node *list);
 
 int main(void)
 {
-	struct node *list = newList(5);
+	printf("Enter number of nodes: ");
+	int numNodes;
+	scanf("%d", &numNodes);
+
+	// Initialise first node in the list.
+	struct node *head = NodeNew(0);
+
+	// Initialise the other nodes and link them together.
+	struct node *curr = head;
+	for (int i = 1; i < numNodes; ++i) {
+		curr->next = NodeNew(0);
+		curr = curr->next;
+	}
 	
-	int listSize = listSize(list);
+	int myListSize = listSize(head);
+	printf("%d\n", myListSize);
 
 	return 0;
 }

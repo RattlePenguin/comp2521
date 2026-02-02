@@ -7,4 +7,12 @@ struct node {
 	struct node *next;
 };
 
+struct list {
+	struct node *head;
+};
+
+
+struct list *ListNew(void);
+struct node *NodeNew(int value);
+
 #endif
