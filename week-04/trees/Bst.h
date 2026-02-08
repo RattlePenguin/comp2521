@@ -8,7 +8,7 @@ struct node {
 };
 
 struct node *newNode(int value);
-struct node *bstInsert(struct node *root, int value);
-void bstPrint(struct node *root);
+struct node *BstInsert(struct node *root, int value);
+void BstPrint(struct node *root);
 
 #endif

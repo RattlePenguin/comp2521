@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-#include "Tree.h"
+#include "Bst.h"
 
 int main(void) {
 	printf("Enter number of nodes: ");
@@ -16,11 +16,11 @@ int main(void) {
 	for (int i = 0; i < numNodes; ++i) {
 		int value = 0;
 		if (scanf("%d", &value)) {
-			root = bstInsert(root, value);
+			root = BstInsert(root, value);
 		}
 	}
 
-	bstPrint(root);
+	BstPrint(root);
 
 	return 0;
 }
