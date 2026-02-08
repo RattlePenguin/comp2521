@@ -55,6 +55,25 @@ void GraphPrint(struct graph *g) {
 
 	printf("   ");
 	for (int i = 0; i < g->numNodes; ++i) {
-		printf("%02d ", i);
+		printf("% 2d ", i);
 	}
+	printf("\n");
+
+	for (int i = 0; i < g->numNodes; ++i) {
+		printf("% 2d ", i);
+		for (int j = 0; j < g->numNodes; ++j) {
+			printf("% 2d ", g->edges[i][j]);
+		}
+		printf("\n");
+	}
+}
+
+/**
+ *  Returns true if there exists an edge between node n and node m.
+ */
+bool GraphEdgeExists(struct graph *g, int n, int m) {
+	if (g && n && m) {
+		return true;
+	}
+	return false;
 }
