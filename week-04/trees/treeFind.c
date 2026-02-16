@@ -4,7 +4,6 @@
 
 #include "Bst.h"
 
-
 bool treeContains(struct node *tree, int value);
 bool treeContainsRecursive(struct node *tree, int value);
 
