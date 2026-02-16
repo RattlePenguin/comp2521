@@ -20,7 +20,7 @@ If you're not good at handling pointers yet, there's no better time than RIGHTNO
 Understand the difference between pointers and addresses.
 
 Pointer arithmetic depends on the type of the pointer.
-For example, incrementing (adding 1) to an int pointer will move up its address by sizeof(int) bytes which is usually 4 on most systems. On the other hand, incrementing a char pointer will only move it up by 1 byte.
+For example, incrementing (adding 1) to an int pointer will move up its address by sizeof(int) bytes which is 4 on most systems. On the other hand, incrementing a char pointer will only move it up by 1 byte.
 
 ## Memory Allocation
 You should dynamically allocate memory when:
@@ -36,6 +36,8 @@ The point is to extract the "subproblem".
 In doing so, you can utilise the solution to smaller subproblems to solve larger ones.
 
 Recognise the "base case" and the "recursive case".
+
+Recognise when you need to process before or after recursing. Or both.
 
 ## Linked Lists
 ### Why do we sometimes use `struct list` in addition to `struct node`?

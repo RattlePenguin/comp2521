@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "data-structures/linked-list/List.h"
+#include "List.h"
 
 void printList(struct node *head);
 
