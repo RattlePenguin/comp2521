@@ -7,9 +7,12 @@ struct node {
 	struct node *next;
 };
 
-// Linked List funny version
 struct list {
 	struct node *head;
 };
+
+// Functions
+struct list *ListNew(void);
+struct node *NodeNew(int value);
 
 #endif
