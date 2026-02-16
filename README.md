@@ -16,7 +16,7 @@ This repository will contain most if not all of what I teach in tutorials, with 
 
 In previous terms, I would recap lecture content for the first half of the tutorial.
 I am moving on from this style and will instead opt for more open-ended tutorials so that I can focus on problems that you all have more trouble with.
-As such, please _watch the lectures_ before coming to class.
+As such, please **watch the lectures** before coming to class.
 
 # Prerequisites
 - Watch :eyes: or Star :star: this repository to get notified of changes.
@@ -54,7 +54,7 @@ Finally, you can email me...
 ### How does lab marking work?
 
 Labs may either have an automarked component, a handmarked component, or both.
-_EVERY_ component must be submitted online by the due date shown in the lab spec.
+**EVERY** component must be submitted online by the due date shown in the lab spec.
 
 For the automarked component, an autograder will run your code through tests which will decide your score.
 
