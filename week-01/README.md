@@ -36,7 +36,6 @@ The point is to extract the "subproblem".
 In doing so, you can utilise the solution to smaller subproblems to solve larger ones.
 
 Recognise the "base case" and the "recursive case".
-
 Recognise when you need to process before or after recursing. Or both.
 
 ## Linked Lists
