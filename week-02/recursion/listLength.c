@@ -3,7 +3,7 @@
 
 #include "List.h"
 
-int listSize(struct node *list);
+int listLength(struct node *list);
 
 int main(void)
 {
@@ -21,16 +21,17 @@ int main(void)
 		curr = curr->next;
 	}
 	
-	int myListSize = listSize(head);
+	// Print the size of the list.
+	int myListSize = listLength(head);
 	printf("%d\n", myListSize);
 
 	return 0;
 }
 
 // Recursively find the size of an acyclic linked list.
-int listSize(struct node *list) {
+int listLength(struct node *list) {
 	if (list == NULL) {
 		return 0;
 	}
-	return listSize(list->next) + 1;
+	return listLength(list->next) + 1;
 }
