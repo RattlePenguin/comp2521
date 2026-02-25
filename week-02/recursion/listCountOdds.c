@@ -1,5 +1,5 @@
 /**
- *  Write a recursive function to compute the length of a linked list.
+ *  Write a recursive function to count the number of odd numbers in a linked list.
  */
 
 #include <stdio.h>
@@ -7,7 +7,7 @@
 
 #include "List.h"
 
-int listLength(struct node *l);
+int listCountOdds(struct node *l);
 
 int main(void)
 {
@@ -23,13 +23,13 @@ int main(void)
 		ListAppend(head, i);
 	}
 	
-	// Print the length of the list.
-	int myListLength = listLength(head);
-	printf("%d\n", myListLength);
+	// Print the number of odd numbers in list.
+	int numOdds = listCountOdds(head);
+	printf("%d\n", numOdds);
 
 	return 0;
 }
 
-// Recursively find the size of an acyclic linked list.
-int listLength(struct node *l) {
+// Recursively return the number of odd numbers in a linked list.
+int listCountOdds(struct node *l) {
 }

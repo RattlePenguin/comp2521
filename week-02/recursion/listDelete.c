@@ -1,13 +1,9 @@
-/**
- *  Write a recursive function to compute the length of a linked list.
- */
-
 #include <stdio.h>
 #include <stdlib.h>
 
 #include "List.h"
 
-int listLength(struct node *l);
+int listLength(struct node *list);
 
 int main(void)
 {
@@ -20,16 +16,16 @@ int main(void)
 
 	// Initialise the other nodes and link them together.
 	for (int i = 1; i < numNodes; ++i) {
-		ListAppend(head, i);
+		ListAppend(head, 0);
 	}
 	
-	// Print the length of the list.
-	int myListLength = listLength(head);
-	printf("%d\n", myListLength);
+	// Print the size of the list.
+	int myListSize = listLength(head);
+	printf("%d\n", myListSize);
 
 	return 0;
 }
 
 // Recursively find the size of an acyclic linked list.
-int listLength(struct node *l) {
+int listLength(struct node *list) {
 }

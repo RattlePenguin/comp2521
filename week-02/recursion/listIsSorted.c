@@ -1,13 +1,11 @@
-/**
- *  Write a recursive function to compute the length of a linked list.
- */
-
 #include <stdio.h>
 #include <stdlib.h>
 
+#include <stdbool.h>
+
 #include "List.h"
 
-int listLength(struct node *l);
+bool listIsSorted(struct node *l);
 
 int main(void)
 {
@@ -20,16 +18,21 @@ int main(void)
 
 	// Initialise the other nodes and link them together.
 	for (int i = 1; i < numNodes; ++i) {
-		ListAppend(head, i);
+		ListAppend(head, 0);
 	}
 	
-	// Print the length of the list.
-	int myListLength = listLength(head);
-	printf("%d\n", myListLength);
+	// Print whether the list is sorted.
+	bool isSorted = listIsSorted(head);
+	
+	if (isSorted) {
+		printf("TRUE\n");
+	} else {
+		printf("FALSE\n");
+	}
 
 	return 0;
 }
 
-// Recursively find the size of an acyclic linked list.
-int listLength(struct node *l) {
+// Recursively find whether the given list is sorted.
+bool listIsSorted(struct node *l) {
 }
