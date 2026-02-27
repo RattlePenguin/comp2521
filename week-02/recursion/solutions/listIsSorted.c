@@ -34,5 +34,7 @@ int main(void)
 
 // Recursively find whether the given list is sorted.
 bool listIsSorted(struct node *l) {
-	return false;
+	if (l == NULL || l->next == NULL) return true;
+	if (l->value > l->next->value) return false;
+	return listIsSorted(l->next);
 }

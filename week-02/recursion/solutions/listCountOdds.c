@@ -32,5 +32,11 @@ int main(void)
 
 // Recursively return the number of odd numbers in a linked list.
 int listCountOdds(struct node *l) {
-	return 0;
+	if (l == NULL) return 0;
+
+	if (l->value % 2 != 0) {
+		return 1 + listCountOdds(l->next);
+	} else {
+		return listCountOdds(l->next);
+	}
 }

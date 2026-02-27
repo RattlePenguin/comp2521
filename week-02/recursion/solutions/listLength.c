@@ -32,5 +32,6 @@ int main(void)
 
 // Recursively find the size of an acyclic linked list.
 int listLength(struct node *l) {
-	return 0;
+	if (l == NULL) return 0;
+	return 1 + listLength(l->next);
 }
