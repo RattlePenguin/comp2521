@@ -28,7 +28,6 @@ void printArr(int *arr, int size) {
 
 void bubbleSort(int *arr, int size) {
 	bool sorted = false;
-
 	while (!sorted) {
 		sorted = true;
 		for (int i = 0; i < size - 1; ++i) {
