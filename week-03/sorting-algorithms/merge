@@ -1,0 +1,12 @@
+// Suppose that at a particular point during the execution of the mergeSort function, the array A looks like this:
+
+A = { 1, 4, 5, 6, 7, 2, 3, 4, 7, 9 }
+
+
+// Show how the call merge(A, 0, 4, 9) would merge the elements of the two sorted subarrays into a single sorted array.
+// What is the time complexity of merge?
+// Using this example, is mergeSort stable?
+
+A = [ 1, 4, 5, 6, 7, 2, 3, 4, 7, 9 ]
+
+tmp = []

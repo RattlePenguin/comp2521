@@ -2,6 +2,10 @@
 At this point, you should be pretty comfortable handling recursive problems and attempting solutions for them.
 Just as you have for done for linked lists, you will come to encounter recursive approaches to other data structures like trees and graphs.
 
+Analysing your programs helps you determine their correctness and efficiency.
+We use Big O Notation to represent how a program's runtime or space requirements grow with an input size n.
+The worst case complexity is usually most important, telling us "how bad" a program could possibly run.
+
 There are about 7 sorting algorithms excluding variations in this course.
 As such, I recommend that you eventually memorise all of them to save lots of time in the final exam.
 Trust that this is very easy if you regularly come back and take a look at each one.
@@ -11,6 +15,7 @@ Trust that this is very easy if you regularly come back and take a look at each 
 
 # Topics
 - Recursion cont.
+- Big O Notation (Time and Space Complexity)
 - Sorting Algorithms
 
 ## Recursion
@@ -19,9 +24,13 @@ There may be an infinite number of scenarios where recursion is possible, and th
 
 Take the time to do some practice questions -- there are heaps on the course page and online!
 
-## Sorting Algorithms
-Your goal for this topic should be to:
-- Name all sorting algorithms in this course.
-- Know the general steps or concept of the algorithm.
-- Comfortably state the worst, average and best case time complexity, stability, space complexity and whether it's adaptive or not for each sort.
+## Big O Notation
+We ignore constant factors and lower-order terms in Big O Notation, i.e. O(2n) -> O(n).
+
+Common Big O complexities include:
+- O(1) | Constant
+- O(logn) | Logarithmic
+- O(n) | Linear
+- O(nlogn)
+- O(n<sup>2</sup>) | Quadratic / Polynomial
 

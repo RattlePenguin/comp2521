@@ -1,5 +1,6 @@
 # Introduction
-This week, get back into the groove of working with C. Find some code you've written before and remind yourself how to read and understand what your code is doing.
+This week, get back into the groove of working with C.
+Find some code you've written before and remind yourself how to read and understand what your code is doing.
 Some good concepts to remember are structs, loops, functions, pointers, types, operators.
 
 This course moves quickly, so be prepared and spend some free time studying too.

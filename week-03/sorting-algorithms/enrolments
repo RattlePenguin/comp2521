@@ -1,0 +1,16 @@
+// Consider the following simple table of enrolments, sorted by course code:
+
+course		name	program
+-----------------------------
+COMP1927	Jane	3970
+COMP1927	John	3978
+COMP1927	Pete	3978
+MATH1231	John	3978
+MATH1231	Adam	3970
+PSYC1011	Adam	3970
+PSYC1011	Jane	3970
+
+// We wish to sort it by student name, so that we can easily see what courses each student is studying.
+// Show an example of what the final array would look like if:
+	// we used a stable sorting algorithm.
+	// we used an unstable sorting algorithm.

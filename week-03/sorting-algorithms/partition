@@ -1,0 +1,7 @@
+// Show how the call partition(A, 0, 9) from quickSort would partition each of these arrays.
+// What index is returned by each of these calls?
+// What is the time complexity of partition?
+
+A = { 5, 3, 9, 6, 4, 2, 9, 8, 1, 7 }
+B = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 }
+C = { 9, 8, 7, 6, 5, 4, 3, 2, 1, 0 }

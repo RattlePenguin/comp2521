@@ -20,5 +20,6 @@ struct node *ListAppend(struct node *root, int value);
 struct node *ListPrepend(struct node *root, int value);
 struct node *ListDelete(struct node *root, int value);
 bool ListContains(struct node *root, int value);
+void ListPrint(struct node *root);
 
 #endif

@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include <stdlib.h>
 
 #include "List.h"
@@ -85,3 +86,15 @@ bool ListContains(struct node *root, int value) {
 	return true;
 }
 
+/**
+ *  Prints the given list in order.
+ */
+void ListPrint(struct node *root) {
+	if (root == NULL) return;
+
+	printf("%d", root->value);
+	for (root = root->next; root != NULL; root = root->next) {
+		printf(" %d", root->value);
+	}
+	printf("\n");
+}
