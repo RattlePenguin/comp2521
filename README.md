@@ -63,7 +63,7 @@ This can be done within three weeks of the release week (e.g. Week 1 - Week 3).
 We will usually ask you to explain your solution, followed by some short questions.
 
 For example, the week 1 lab is due Monday 12pm, week 2.
-The automarked component must be submitted by this time.
+Everything must be submitted by this time.
 The handmarked component can be marked up till Friday, week 3.
 
 You cannot get labs marked in HELP sessions.
