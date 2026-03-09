@@ -2,3 +2,5 @@
 -Idata-structures/tree
 -Idata-structures/linked-list
 -Idata-structures/graphs
+-Idata-structures/stack
+
