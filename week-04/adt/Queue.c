@@ -1,9 +1,4 @@
-#include "Stack.h"
-
-struct queue {
-	Stack s1;
-	Stack s2;
-};
+#include "Queue.h"
 
 Queue QueueNew(void) {
 	Queue q = malloc(sizeof(struct queue));
@@ -19,9 +14,16 @@ void QueueFree(Queue q) {
 }
 
 void QueueEnqueue(Queue q, int item) {
-	// TODO
+	StackPush(q->s1, item);
 }
 
 int QueueDequeue(Queue q) {
-	// TODO
+	if (StackSize(q->s2) > 0) {
+		return StackPop(q->s2);
+	}
+
+	while (StackSize(q->s1) > 0) {
+		StackPush(q->s2, StackPop(q->s1));
+	}
+	return StackPop(q->s2);
 }
