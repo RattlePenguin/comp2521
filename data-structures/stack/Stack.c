@@ -6,7 +6,7 @@
 Stack StackNew(void) {
 	Stack s = calloc(1, sizeof(Stack));
 	s->capacity = 32;
-	s->items = malloc(s->capacity * sizeof(int));
+	s->items = malloc((size_t) s->capacity * sizeof(int));
 
 	return s;
 }
@@ -20,7 +20,7 @@ void StackFree(Stack s) {
 // Pushes an item onto the stack
 void StackPush(Stack s, int item) {
 	if (s->numItems >= s->capacity) {
-		s->items = realloc(s->items , 2 * s->capacity * sizeof(int));
+		s->items = realloc(s->items , (size_t) (2 * s->capacity) * (int) sizeof(int));
 		s->capacity *= 2;
 	}
 
