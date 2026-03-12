@@ -14,8 +14,8 @@ UTIL_OBJECTS := $(UTIL_SOURCES:.c=.o)
 INCLUDE_FLAGS := -I$(HEADER_DIR) $(shell find $(HEADER_DIR) -type d | sed 's/^/-I/')
 
 # 4. Settings
-file ?= main.c
-output = $(basename $(file))
+files ?= main.c
+output = $(basename $(firstword $(files)))
 CC = gcc
 CFLAGS = -ggdb -pedantic-errors -Wall -Wextra -Werror -Wconversion -Wsign-conversion $(INCLUDE_FLAGS)
 AR = ar rcs
@@ -36,9 +36,9 @@ $(LIB_NAME): $(UTIL_OBJECTS)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 # Step C: Link your local file with the static library
-$(output): $(file) $(LIB_NAME)
-	@echo "Linking $(output)..."
-	$(CC) $(CFLAGS) $(file) -L$(HEADER_DIR) -l:$(LIB_NAME) -o $(output)
+$(output): $(files) $(LIB_NAME)
+	@echo "Compiling $(files) and linking with $(LIB_NAME)..."
+	$(CC) $(CFLAGS) $(files) -L$(HEADER_DIR) -l:$(LIB_NAME) -o $(output)
 
 clean:
 	rm -f $(output) $(LIB_NAME)
