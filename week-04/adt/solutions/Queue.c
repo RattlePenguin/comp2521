@@ -14,9 +14,16 @@ void QueueFree(Queue q) {
 }
 
 void QueueEnqueue(Queue q, int item) {
-	// TODO
+	StackPush(q->s1, item);
 }
 
 int QueueDequeue(Queue q) {
-	// TODO
+	if (StackSize(q->s2) > 0) {
+		return StackPop(q->s2);
+	}
+
+	while (StackSize(q->s1) > 0) {
+		StackPush(q->s2, StackPop(q->s1));
+	}
+	return StackPop(q->s2);
 }
