@@ -7,5 +7,18 @@
 #include "Bst.h"
 
 int bstNodeLevel(struct node *t, int key) {
-	return 0;
+	if (t == NULL) return -1;
+
+	int res;
+	if (t->value > key) {
+		res = bstNodeLevel(t->left, key);
+	} else if (t->value < key) {
+		res = bstNodeLevel(t->right, key);
+	} else {
+		return 0;
+	}
+
+	if (res != -1) return 1 + res;
+	return res;
 }
+

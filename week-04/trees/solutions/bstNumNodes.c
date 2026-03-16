@@ -5,5 +5,7 @@
 #include "Bst.h"
 
 int bstNumNodes(struct node *t) {
-	return 0;
+	if (t == NULL) return 0;
+
+	return 1 + bstNumNodes(t->left) + bstNumNodes(t->right);
 }

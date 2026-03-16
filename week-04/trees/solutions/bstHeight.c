@@ -7,6 +7,13 @@
 
 #include "Bst.h"
 
+int max(int x, int y) {
+	if (x > y) return x;
+	return y;
+}
+
 int bstHeight(struct node *t) {
-	return 0;
+	if (t == NULL) return -1;
+
+	return 1 + max(bstHeight(t->left), bstHeight(t->right));
 }

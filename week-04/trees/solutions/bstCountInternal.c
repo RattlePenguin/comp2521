@@ -6,5 +6,7 @@
 #include "Bst.h"
 
 int bstCountInternal(struct node *t) {
-	return 0;
+	if (t == NULL || (t->left == NULL && t->right == NULL)) return 0;
+
+	return 1 + bstCountInternal(t->left) + bstCountInternal(t->right);
 }

@@ -6,5 +6,10 @@
 #include "Bst.h"
 
 int bstCountGreater(struct node *t, int val) {
-	return 0;
+	if (t == NULL) return 0;
+
+	if (t->value < val) {
+		return bstCountGreater(t->right, val);
+	}
+	return 1 + bstCountGreater(t->right, val);
 }
