@@ -35,6 +35,13 @@ void AvlTreeFreeHelper();
  */
 void AvlTreeInsert(AvlTree tree, int value);
 
+
+/**
+ *  Helper function for AvlTreeInsert.
+ *  Recursively inserts nodes, and self-balances on unwind.
+ */
+struct node *AvlTreeInsertHelper(struct node *n, int value);
+
 /**
  *  Deletes the given value from the given AVL tree.
  *  Returns true if value was found, else false.
