@@ -22,13 +22,13 @@ AvlTree AvlTreeNew();
 /**
  *  Frees a given AVL tree and its components.
  */
-void AvlTreeFree();
+void AvlTreeFree(AvlTree tree);
 
 /**
  *  Helper function for AvlTreeFree.
  *  Recursive free for nodes.
  */
-void AvlTreeFreeHelper();
+void AvlTreeFreeHelper(struct node *n);
 
 /**
  *  Inserts the given value into the given AVL tree.
@@ -43,6 +43,11 @@ void AvlTreeInsert(AvlTree tree, int value);
 struct node *AvlTreeInsertHelper(struct node *n, int value);
 
 /**
+ *  Rebalances an AVL tree assuming the given node is the root.
+ */
+void AvlTreeRebalance(struct node *n);
+
+/**
  *  Deletes the given value from the given AVL tree.
  *  Returns true if value was found, else false.
  */
@@ -54,8 +59,20 @@ void AvlTreeDelete(AvlTree tree, int value);
 bool AvlTreeContains(AvlTree tree, int value);
 
 /**
+ *  Returns true if the given tree is balanced, else false.
+ */
+bool AvlTreeIsBalanced(AvlTree tree);
+
+/**
+ *  Helper function for AvlTreeIsBalanced.
+ *  Recursively checks balance in all nodes.
+ */
+bool AvlTreeIsBalancedHelper(struct node *n);
+
+/**
  *  Prints the given AVL tree PRE ORDER.
  */
 void AvlTreePrint(AvlTree tree);
+void AvlTreePrintHelper(struct node *n);
 
 #endif

@@ -42,7 +42,7 @@ struct node *AvlTreeInsertHelper(struct node *n, int value) {
 	}
 
 	n->height = getHeight(n);
-	rebalance(n);
+	AvlTreeRebalance(n);
 
 	return NULL;
 }
@@ -72,25 +72,31 @@ int max(int x, int y) {
 	return x >= y ? x : y;
 }
 
-/**
- *  Rebalances an AVL tree assuming the given node is the root.
- */
-void rebalance(struct node *n) {
+void AvlTreeRebalance(struct node *n) {
 	if (n == NULL) return;
 	int balanceFactor = getHeight(n->left) - getHeight(n->right);
-	
-	
 }
 
-/**
- *  Prints the given tree in pre-order.
- */
-void AvlTreePrint(struct node *root) {
-	if (root == NULL) {
+
+bool AvlTreeIsBalanced(AvlTree tree) {
+	return AvlTreeIsBalancedHelper(tree->root);
+}
+
+bool AvlTreeIsBalancedHelper(struct node *n) {
+	if (n == NULL) return true;
+	return (abs(getHeight(n->left) - getHeight(n->right)) < 2) && AvlTreeIsBalancedHelper(n->left) && AvlTreeIsBalancedHelper(n->right);
+}
+
+void AvlTreePrint(AvlTree tree) {
+	AvlTreePrintHelper(tree->root);
+}
+
+void AvlTreePrintHelper(struct node *n) {
+	if (n == NULL) {
 		return;
 	}
 
-	printf("%d\n", root->value);
-	BstPrint(root->left);
-	BstPrint(root->right);
+	printf("%d\n", n->value);
+	AvlTreePrintHelper(n->left);
+	AvlTreePrintHelper(n->right);
 }
