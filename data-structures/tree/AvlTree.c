@@ -78,14 +78,14 @@ int max(int x, int y) {
 void rebalance(struct node *n) {
 	if (n == NULL) return;
 	int balanceFactor = getHeight(n->left) - getHeight(n->right);
-
+	
 	
 }
 
 /**
  *  Prints the given tree in pre-order.
  */
-void BstPrint(struct node *root) {
+void AvlTreePrint(struct node *root) {
 	if (root == NULL) {
 		return;
 	}
