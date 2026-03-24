@@ -5,3 +5,4 @@ You can take this time to relax. However, I have prepared some extra practice th
 - Recursion
 - Sorting Algorithms
 - Trees
+- Graphs
