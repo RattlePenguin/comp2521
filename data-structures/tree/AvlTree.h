@@ -56,10 +56,10 @@ void AvlTreeDelete(AvlTree tree, int value);
 /**
  *  Helper function for AvlTreeDelete.
  *  Recursively checks to delete node.
- *  Replaces internal node with next in-order successor.
+ *  Replaces two-children nodes with next in-order successor.
  *  Self-balances on unwind.
  */
-struct node *AvlTreeDeleteHelper(AvlTree tree, struct node *n, int value);
+struct node *AvlTreeDeleteHelper(struct node *n, int value);
 
 /**
  *  Returns true if the given AVL tree contains the given value, else false.

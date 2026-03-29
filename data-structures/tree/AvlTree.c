@@ -9,6 +9,7 @@ int max(int x, int y);
 int getBalanceFactor(struct node *n);
 struct node *leftRotate(struct node *n);
 struct node *rightRotate(struct node *n);
+struct node *findNextInOrder(struct node *n);
 
 AvlTree AvlTreeNew() {
 	AvlTree tree = calloc(1, sizeof(struct avlTree));
@@ -45,9 +46,7 @@ struct node *AvlTreeInsertHelper(struct node *n, int value) {
 	}
 
 	n->height = 1 + max(getHeight(n->left), getHeight(n->right));
-	n = AvlTreeRebalance(n);
-
-	return n;
+	return AvlTreeRebalance(n);
 }
 
 /**
@@ -80,14 +79,10 @@ struct node *AvlTreeRebalance(struct node *n) {
 	int nBF = getBalanceFactor(n);
 
 	if (nBF > 1) { // left-heavy
-		struct node *c = n->left;
-		int cBF = getBalanceFactor(c);
-		if (cBF < 0) n->left = leftRotate(c);
+		if (getBalanceFactor(n->left) < 0) n->left = leftRotate(n->left);
 		n = rightRotate(n);
 	} else if (nBF < -1) { // right-heavy
-		struct node *c = n->right;
-		int cBF = getBalanceFactor(c);
-		if (cBF < 0) n->right = rightRotate(c);
+		if (getBalanceFactor(n->right) > 0) n->right = rightRotate(n->right);
 		n = leftRotate(n);
 	}
 
@@ -136,22 +131,46 @@ struct node *rightRotate(struct node *n) {
 }
 
 void AvlTreeDelete(AvlTree tree, int value) {
-	tree->root = AvlTreeDeleteHelper(tree, tree->root, value);
+	tree->root = AvlTreeDeleteHelper(tree->root, value);
 }
 
-struct node *AvlTreeDeleteHelper(AvlTree tree, struct node *n, int value) {
+struct node *AvlTreeDeleteHelper(struct node *n, int value) {
 	if (n == NULL) return n;
 
 	if (n->value < value) {
-		
+		n->right = AvlTreeDeleteHelper(n->right, value);
 	} else if (n->value > value) {
+		n->left = AvlTreeDeleteHelper(n->left, value);
 	} else {
-		struct node *s = findNextInOrder(tree, value);
+		if (n->left == NULL) {
+			struct node *r = n->right;
+			free(n);
+			return r;
+		} else if (n->right == NULL) {
+			struct node *r = n->left;
+			free(n);
+			return r;
+		}
+		
+		// two children
+		struct node *s = findNextInOrder(n);
+		n->value = s->value;
+		n->right = AvlTreeDeleteHelper(n->right, s->value);
 	}
+
+	n->height = 1 + max(getHeight(n->left), getHeight(n->right));
+	return AvlTreeRebalance(n);
 }
 
-struct node *findNextInOrder(AvlTree tree, int value) {
-	return NULL;
+/**
+ *  Returns the next in-order successor node of the given node.
+ *  Precondition: n must have a right child.
+ */
+struct node *findNextInOrder(struct node *n) {
+	if (n == NULL) return n;
+	struct node *curr = n->right;
+	while (curr->left != NULL) curr = curr->left;
+	return curr;
 }
 
 bool AvlTreeIsBalanced(AvlTree tree) {
