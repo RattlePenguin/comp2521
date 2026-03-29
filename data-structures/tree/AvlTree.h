@@ -45,13 +45,21 @@ struct node *AvlTreeInsertHelper(struct node *n, int value);
 /**
  *  Rebalances an AVL tree assuming the given node is the root.
  */
-void AvlTreeRebalance(struct node *n);
+struct node *AvlTreeRebalance(struct node *n);
 
 /**
  *  Deletes the given value from the given AVL tree.
  *  Returns true if value was found, else false.
  */
 void AvlTreeDelete(AvlTree tree, int value);
+
+/**
+ *  Helper function for AvlTreeDelete.
+ *  Recursively checks to delete node.
+ *  Replaces internal node with next in-order successor.
+ *  Self-balances on unwind.
+ */
+struct node *AvlTreeDeleteHelper(AvlTree tree, struct node *n, int value);
 
 /**
  *  Returns true if the given AVL tree contains the given value, else false.
