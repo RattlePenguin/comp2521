@@ -44,6 +44,7 @@ struct node *AvlTreeInsertHelper(struct node *n, int value);
 
 /**
  *  Rebalances an AVL tree assuming the given node is the root.
+ *  Returns the new root if a rotation occurs.
  */
 struct node *AvlTreeRebalance(struct node *n);
 

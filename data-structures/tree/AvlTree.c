@@ -179,7 +179,7 @@ bool AvlTreeIsBalanced(AvlTree tree) {
 
 bool AvlTreeIsBalancedHelper(struct node *n) {
 	if (n == NULL) return true;
-	return (abs(getHeight(n->left) - getHeight(n->right)) < 2) && AvlTreeIsBalancedHelper(n->left) && AvlTreeIsBalancedHelper(n->right);
+	return (abs(getBalanceFactor(n)) < 2) && AvlTreeIsBalancedHelper(n->left) && AvlTreeIsBalancedHelper(n->right);
 }
 
 void AvlTreePrint(AvlTree tree) {
