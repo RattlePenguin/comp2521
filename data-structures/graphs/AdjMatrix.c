@@ -7,8 +7,8 @@
 /**
  * Creates an empty graph of size numNodes.
  */
-struct graph *GraphNew(int numNodes) {
-	struct graph *g = calloc(1, sizeof(*g));
+Graph GraphNew(int numNodes) {
+	Graph g = calloc(1, sizeof(*g));
 	g->numNodes = numNodes;
 	
 	// Empty graph
@@ -23,7 +23,7 @@ struct graph *GraphNew(int numNodes) {
 /**
  * Frees the given graph and all its components.
  */
-void GraphFree(struct graph *g) {
+void GraphFree(Graph g) {
 	// Free edges
 	for (int i = 0; i < g->numNodes; ++i) {
 		free(g->edges[i]);
@@ -33,15 +33,14 @@ void GraphFree(struct graph *g) {
 }
 
 /**
- * Inserts an edge of weight 1 into graph g, between nodes x and y (bidirectional).
+ * Inserts an edge of weight 1 into graph g, from node x to node y.
  */
-bool GraphEdgeInsert(struct graph *g, int x, int y) {
+bool GraphEdgeInsert(Graph g, int x, int y) {
 	if (g->edges[x][y] != 0) {
 		return false;
 	}
 
 	g->edges[x][y] = 1;
-	g->edges[y][x] = 1;
 	g->numEdges++;
 	return true;
 }
@@ -50,7 +49,7 @@ bool GraphEdgeInsert(struct graph *g, int x, int y) {
  * Prints the adjacency matrix in human-readable format.
  * Breaks format when numNodes / edge weights exceeds double digits.
  */
-void GraphPrint(struct graph *g) {
+void GraphPrint(Graph g) {
 	printf("Adjacency Matrix:\n");
 
 	printf("   ");
@@ -69,11 +68,12 @@ void GraphPrint(struct graph *g) {
 }
 
 /**
- *  Returns true if there exists an edge between node n and node m.
+ *  Returns true if there exists an edge from node n to node m.
  */
-bool GraphEdgeExists(struct graph *g, int n, int m) {
-	if (g && n && m) {
-		return true;
+bool GraphEdgeExists(Graph g, int n, int m) {
+	if (g == NULL) {
+		return false;
 	}
-	return false;
+
+	return g->edges[n][m] > 0;
 }
