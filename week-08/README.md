@@ -43,7 +43,7 @@ Kruskal and Prim's Algorithm are greedy algorithms that pick the minimum edge we
 Kruskal's Algorithm finds MSTs by adding edges in ascending order and preventing cycles at all times.
 
 The steps are as follows:
-- Sort all graph edges by weight in ascending order ($O(E log E)$)
+- Sort all graph edges by weight in ascending order ( $O(E log E)$ )
 - Starting from the edgeless graph:
     1. Add the next edge.
     2. If the graph forms a cycle, remove the edge just added.
