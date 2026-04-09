@@ -1,4 +1,11 @@
+#include <stdio.h>
+
 #include "AdjMatrix.h"
+#include "Set.h"
+
+typedef int Vertex;
+
+Set reachable(Graph g, Vertex src);
 
 int main(void) {
 	Graph g = GraphNew(10);
@@ -30,7 +37,9 @@ int main(void) {
 
 	return 0;
 }
+
 Set reachable(Graph g, Vertex src) {
 	Set s = SetNew();
 	if (g == NULL || g->numNodes <= src) return s;
+	return s;
 }
