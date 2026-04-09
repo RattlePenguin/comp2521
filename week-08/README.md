@@ -50,7 +50,7 @@ The steps are as follows:
         - If using DFS, this is $O(V + E)$
         - With Union-Find, this is practically $O(1)$
     3. If V - 1 edges have been added, the MST is complete.
-    4. Otherwise, repeat from step 1.
+    4. Otherwise, repeat from step i.
 
 This ensures that the edges with the lowest weights are always considered next, minimising the total weight in the final result.
 Since an MST is possible at $E = V - 1$, Kruskal's may be faster than Prim's for sparse graphs (lower $E$).
