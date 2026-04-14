@@ -1,0 +1,11 @@
+Consider a very small hash table with only 11 entries, and a simple hash function h(x) = x % 11.
+If we start with an empty table and insert the following keys in the order shown:
+
+11  16  27  35  22  20  15  24  29  19  13
+
+Give the final state of the table for each of the following collision resolution strategies:
+- separate chaining, with chains in ascending order
+- linear probing
+- double hashing, with h2(x) = (x % 3) + 1
+
+
