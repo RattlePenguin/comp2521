@@ -50,5 +50,36 @@ $$\alpha = \frac{n}{m}$$
 Once the load factor reaches a certain threshold (e.g. 0.50) the hash table is usually doubled in size.
 
 ### Linear Probing
+Linear probing will attempt to insert a key at its correct index first to obtain $O(1)$ lookup.
+If it is already occupied, it simply iterates through the array from that index until it finds an empty slot.
+To find that same key, we again iterate from the hashed index.
+If an empty slot is found, then the key does not exist.
+
+This results in $O(n)$ lookup and insertion in the worst case, when the next empty slot is far away.
+
+Linear probing has two ways to remove keys:
+#### Backshift Deletion
+Once we find the correct key position, we remove it and reinsert all elements after it until an empty slot.
+This makes deletion expensive, but moves keys closer to their intended index improving lookup performance.
+
+#### Tombstone Deletion
+Once we find the correct key position, we replace it with a "null" value known as a tombstone.
+The next time we insert into the hash table, if we encounter a tombstone we can simply replace it.
+
+When performing lookups, keys may still remain behind tombstones, increasing the time taken.
+
 ### Separate Chaining
+Separate chaining stores a linked list of elements at each index, like an adjacency list.
+
+This results in $O(n)$ lookup, insertion and deletion in the worst case.
+
 ### Double Hashing
+Double hashing requires the use of a secondary hash function `hash2`.
+When the primary hash function `p = hash1(x)` results in a collision, we calculate `s = hash2(x)`.
+The next slots to check will be in the form:
+
+``` c
+p + (k * s) % size // where k = 1, 2, 3, ...
+```
+
+The size of the hash table should ideally be a prime number to ensure that double hashing visits every index.
