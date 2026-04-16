@@ -8,4 +8,15 @@ Give the final state of the table for each of the following collision resolution
 - linear probing
 - double hashing, with h2(x) = (x % 3) + 1
 
-
+H
+0  :
+1  :
+2  :
+3  :
+4  :
+5  :
+6  :
+7  :
+8  :
+9  :
+10 :
