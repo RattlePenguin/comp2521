@@ -4,3 +4,4 @@
 -Idata-structures/graphs
 -Idata-structures/stack
 -Idata-structures/set
+-Idata-structures/hash-table
