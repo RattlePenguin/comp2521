@@ -62,5 +62,21 @@ A min heap is used to find the greatest $k$ values, because we want to pop the s
 v.v.
 
 ## Tries
-Manipulating a trie is similar to linked lists or trees.
+Dealing with a trie is similar to trees with more children.
+The primary differences are the end indicators!
 
+Since we have many children, these could be represented using an array.
+
+Insertion might produce no new nodes, with just the addition of an end indicator.
+Otherwise, it should create new nodes recursively until it reaches the end of the key it is inserting.
+
+Similar to insertion, deletion may just remove an end indicator, or recursively delete previous nodes that have no children or are not ends.
+
+Therefore, insertion, lookup, and deletion should take $O(m)$ time where $m$ is the length of the key.
+
+### Variants
+The key concept of the trie remains the same, but these variants offer benefits with less memory, or faster operations.
+- Linked Lists of Children
+- Alphabet Reduction
+    - Byte-splitting
+- Compressed Tries
