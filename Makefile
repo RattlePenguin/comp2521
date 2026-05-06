@@ -1,5 +1,5 @@
 # To use this Makefile, run:
-# make -f (PATH TO MAKEFILE) file=(FILE TO COMPILE)
+# make -f (PATH TO MAKEFILE) files=(FILES TO COMPILE)
 
 # 1. Directories
 ROOT_DIR := $(shell dirname $(realpath $(firstword $(MAKEFILE_LIST))))
