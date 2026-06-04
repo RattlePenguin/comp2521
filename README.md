@@ -1,8 +1,8 @@
 # Course Homepage
-[WebCMS](https://webcms3.cse.unsw.edu.au/COMP2521/26T1/)
+[WebCMS](https://webcms3.cse.unsw.edu.au/COMP2521/26T2/)
 
 # Course Forum
-[Discourse](https://discourse01.cse.unsw.edu.au/26T1/COMP2521/)
+[Discourse](https://discourse01.cse.unsw.edu.au/26T2/COMP2521/)
 
 # My Email
 b.setiawan@unsw.edu.au
