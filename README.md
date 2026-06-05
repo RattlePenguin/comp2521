@@ -66,6 +66,8 @@ For example, the week 1 lab is due Monday 12pm, week 2.
 Everything must be submitted by this time.
 The handmarked component can be marked up till Friday, week 3.
 
+You will need to send in a request for hand marking via the "Lab Marking Queue" option on the homepage.
+
 You cannot get labs marked in HELP sessions.
 
 ### What's your favourite colour!?
