@@ -1,5 +1,7 @@
 # To use this Makefile, run:
 # make -f (PATH TO MAKEFILE) files=(FILES TO COMPILE)
+# e.g. make -f ../../Makefile files="printList.c List.c"
+# Currently can only make one program at a time
 
 # 1. Directories
 ROOT_DIR := $(shell dirname $(realpath $(firstword $(MAKEFILE_LIST))))
@@ -42,6 +44,6 @@ $(output): $(files) $(LIB_NAME)
 
 clean:
 	rm -f $(output) $(LIB_NAME)
-	find $(HEADER_DIR) -name "*.o" -delete
+	find $(HEADER_DIR) -name "*.[ao]" -delete
 
 .PHONY: all clean
