@@ -13,8 +13,7 @@ int main(void) {
 
 void solveHanoi(int numDisks, char *fromRod, char *toRod, char *otherRod) {
 	if (numDisks == 0) return;
-
 	solveHanoi(numDisks - 1, fromRod, otherRod, toRod);
-	printf("Move disk from rod %c to rod %c\n", *fromRod, *toRod);
+	printf("Move disk from Rod %c to Rod %c\n", *fromRod, *toRod);
 	solveHanoi(numDisks - 1, otherRod, toRod, fromRod);
 }

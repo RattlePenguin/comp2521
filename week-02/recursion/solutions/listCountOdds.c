@@ -22,6 +22,8 @@ int main(void)
 	for (int i = 1; i < numNodes; ++i) {
 		ListAppend(head, i);
 	}
+
+	ListPrint(head);
 	
 	// Print the number of odd numbers in list.
 	int numOdds = listCountOdds(head);
@@ -33,10 +35,6 @@ int main(void)
 // Recursively return the number of odd numbers in a linked list.
 int listCountOdds(struct node *l) {
 	if (l == NULL) return 0;
-
-	if (l->value % 2 != 0) {
-		return 1 + listCountOdds(l->next);
-	} else {
-		return listCountOdds(l->next);
-	}
+	int odd = l->value % 2 == 1;
+	return odd + listCountOdds(l->next);
 }

@@ -17,8 +17,10 @@ int main(void)
 
 	// Initialise the other nodes and link them together.
 	for (int i = 1; i < numNodes; ++i) {
-		ListAppend(head, -i);
+		ListAppend(head, i);
 	}
+
+	ListPrint(head);
 	
 	// Print whether the list is sorted.
 	bool isSorted = listIsSorted(head);
@@ -35,6 +37,9 @@ int main(void)
 // Recursively find whether the given list is sorted.
 bool listIsSorted(struct node *l) {
 	if (l == NULL || l->next == NULL) return true;
-	if (l->value > l->next->value) return false;
-	return listIsSorted(l->next);
+	if (l->value <= l->next->value) {
+		return listIsSorted(l->next);
+	} else {
+		return false;
+	}
 }

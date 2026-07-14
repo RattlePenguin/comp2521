@@ -22,6 +22,8 @@ int main(void)
 	for (int i = 1; i < numNodes; ++i) {
 		ListAppend(head, i);
 	}
+
+	ListPrint(head);
 	
 	// Print the length of the list.
 	int myListLength = listLength(head);
