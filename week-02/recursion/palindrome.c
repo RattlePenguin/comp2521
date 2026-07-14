@@ -22,4 +22,5 @@ int main(void) {
 }
 
 bool isPalindrome(char *s) {
+	return false;
 }

@@ -3,7 +3,7 @@
 
 #include "List.h"
 
-int listLength(struct node *list);
+struct node *listDelete(struct node *list, int val);
 
 int main(void)
 {
@@ -19,13 +19,22 @@ int main(void)
 		ListAppend(head, 0);
 	}
 	
-	// Print the size of the list.
-	int myListSize = listLength(head);
-	printf("%d\n", myListSize);
+	printf("before:\n");
+	ListPrint(head);
+	printf("\n");
+
+	printf("Enter node value to delete: ");
+	int val;
+	scanf("%d", &val);
+
+	head = listDelete(head, val);
+
+	printf("after:\n");
+	ListPrint(head);
 
 	return 0;
 }
 
-// Recursively find the size of an acyclic linked list.
-int listLength(struct node *list) {
+struct node *listDelete(struct node *list, int val) {
+	return list;
 }
