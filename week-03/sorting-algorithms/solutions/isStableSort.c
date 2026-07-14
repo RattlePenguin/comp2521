@@ -55,5 +55,6 @@ int main(void) {
 
 // Returns true if the sorted array is stable, false otherwise.
 bool isStableSort(Item original[], Item sorted[], int size) {
+	if (original && sorted && size) return false;
 	return false;
 }
