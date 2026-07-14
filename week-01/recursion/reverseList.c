@@ -15,11 +15,13 @@ int main(void) {
 		head = new;
 	}
 
-	// printList(head);
+	printf("before:\n");
+	ListPrint(head);
 	
 	head = reverseList(head);
 
-	// printList(head);
+	printf("after:\n");
+	ListPrint(head);
 	return 0;
 }
 

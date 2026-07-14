@@ -17,6 +17,7 @@ int main(void) {
 
 	// Print the linked list
 	printList(head);
+	printf("\n");
 
 	return 0;
 }
