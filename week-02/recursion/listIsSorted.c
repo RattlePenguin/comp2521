@@ -1,40 +1,34 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include <stdbool.h>
+#include <stdio.h>
 
 #include "List.h"
 
 bool listIsSorted(struct node *l);
 
-int main(void)
-{
-	printf("Enter number of nodes: ");
-	int numNodes;
-	scanf("%d", &numNodes);
+int main(void) {
+  printf("Enter number of nodes: ");
+  int numNodes;
+  scanf("%d", &numNodes);
 
-	// Initialise first node in the list.
-	struct node *head = NodeNew(0);
+  // Initialise first node in the list.
+  struct node *head = NodeNew(0);
 
-	// Initialise the other nodes and link them together.
-	for (int i = 1; i < numNodes; ++i) {
-		ListAppend(head, i);
-	}
+  // Initialise the other nodes and link them together.
+  for (int i = 1; i < numNodes; ++i) {
+    ListAppend(head, i);
+  }
 
-	ListPrint(head);
-	
-	// Print whether the list is sorted.
-	bool isSorted = listIsSorted(head);
-	
-	if (isSorted) {
-		printf("TRUE\n");
-	} else {
-		printf("FALSE\n");
-	}
+  ListPrint(head);
 
-	return 0;
+  // Print whether the list is sorted.
+  bool isSorted = listIsSorted(head);
+
+  if (isSorted) {
+    printf("TRUE\n");
+  } else {
+    printf("FALSE\n");
+  }
 }
 
 // Recursively find whether the given list is sorted.
-bool listIsSorted(struct node *l) {
-	return false;
-}
+bool listIsSorted(struct node *l) { return false; }

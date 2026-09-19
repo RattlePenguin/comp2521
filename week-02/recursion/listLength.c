@@ -3,36 +3,30 @@
  */
 
 #include <stdio.h>
-#include <stdlib.h>
 
 #include "List.h"
 
 int listLength(struct node *l);
 
-int main(void)
-{
-	printf("Enter number of nodes: ");
-	int numNodes;
-	scanf("%d", &numNodes);
+int main(void) {
+  printf("Enter number of nodes: ");
+  int numNodes;
+  scanf("%d", &numNodes);
 
-	// Initialise first node in the list.
-	struct node *head = NodeNew(0);
+  // Initialise first node in the list.
+  struct node *head = NodeNew(0);
 
-	// Initialise the other nodes and link them together.
-	for (int i = 1; i < numNodes; ++i) {
-		ListAppend(head, i);
-	}
+  // Initialise the other nodes and link them together.
+  for (int i = 1; i < numNodes; ++i) {
+    ListAppend(head, i);
+  }
 
-	ListPrint(head);
-	
-	// Print the length of the list.
-	int myListLength = listLength(head);
-	printf("%d\n", myListLength);
+  ListPrint(head);
 
-	return 0;
+  // Print the length of the list.
+  int myListLength = listLength(head);
+  printf("%d\n", myListLength);
 }
 
 // Recursively find the size of an acyclic linked list.
-int listLength(struct node *l) {
-	return 0;
-}
+int listLength(struct node *l) { return 0; }
