@@ -4,6 +4,10 @@
  * while and then using for.
  */
 
+#include <List.h>
+#include <stdio.h>
+#include <stdlib.h>
+
 /**
 struct node {
   int value;
@@ -17,10 +21,6 @@ struct list {
 };
 */
 
-#include <List.h>
-#include <stdio.h>
-#include <stdlib.h>
-
 int listSum(struct node *l);
 
 int main() {
@@ -33,4 +33,10 @@ int main() {
   printf("ListSum: %d\n", listSum(l));
 }
 
-int listSum(struct node *l) { return 0; }
+int listSum(struct node *l) {
+  int sum = 0;
+  for (struct node *cur = l; cur != NULL; cur = cur->next) {
+    sum += cur->value;
+  }
+  return sum;
+}
